@@ -36,19 +36,36 @@ body {
     align-items: center;
     text-align: center;
     padding: 0 20px;
-    background: linear-gradient(rgba(10, 14, 20, 0.8), rgba(10, 14, 20, 0.8)), url('assets/hero_bg.png');
+    background: linear-gradient(rgba(10, 14, 20, 0.9), rgba(10, 14, 20, 0.9)), url('assets/hero_bg.png');
     background-size: cover;
     background-position: center;
+}
+
+.hero .glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: var(--accent);
+    filter: blur(150px);
+    opacity: 0.2;
+    pointer-events: none;
 }
 
 .hero h1 {
     font-size: 4rem;
     font-weight: 800;
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero h1 span.accent-text {
     background: linear-gradient(to right, #10b981, #3b82f6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
 }
 
 .hero p {
@@ -56,6 +73,13 @@ body {
     color: var(--text-secondary);
     max-width: 700px;
     margin-bottom: 40px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .cta-button {
@@ -67,6 +91,48 @@ body {
     border-radius: 12px;
     transition: all 0.3s ease;
     box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+}
+
+.telegram-button {
+    padding: 18px 40px;
+    background: #0088cc;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.cta-button:hover, .telegram-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+    filter: brightness(1.1);
+}
+
+/* ADSENSE PLACEHOLDERS */
+.adsense-top, .adsense-middle {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.ads-placeholder {
+    width: 100%;
+    max-width: 970px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .cta-button:hover {
@@ -172,6 +238,48 @@ body {
 .news-content p {
     color: var(--text-secondary);
     font-size: 0.95rem;
+}
+
+/* --- TELEGRAM CTA --- */
+.telegram-cta {
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.cta-glass {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 60px 40px;
+    border-radius: 32px;
+    text-align: center;
+}
+
+.cta-glass h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.pulse-button {
+    display: inline-block;
+    background: #0088cc;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 800;
+    margin-top: 30px;
+    animation: shadow-pulse 2s infinite;
+}
+
+@keyframes shadow-pulse {
+    0% { box-shadow: 0 0 0 0px rgba(0, 136, 204, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(0, 136, 204, 0); }
+    100% { box-shadow: 0 0 0 0px rgba(0, 136, 204, 0); }
 }
 
 /* --- FUNNEL SECTION --- */
