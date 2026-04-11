@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
-
+Disallow: /assets/
+Disallow: /admin/
 Sitemap: https://alexisded.github.io/croma-news-hub/sitemap.xml

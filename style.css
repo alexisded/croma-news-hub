@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
 
 :root {
-    --bg-dark: #0a0e14;
-    --card-bg: rgba(20, 26, 35, 0.7);
-    --accent: #10b981;
-    --accent-glow: rgba(16, 185, 129, 0.3);
-    --text-primary: #f3f4f6;
-    --text-secondary: #9ca3af;
+    --bg-dark: #050505;
+    --card-bg: rgba(15, 15, 20, 0.8);
+    --accent: #EAB308;
+    --accent-glow: rgba(234, 179, 8, 0.25);
+    --text-primary: #FAFAFA;
+    --text-secondary: #A1A1AA;
+    --success: #22C55E;
     --glass: rgba(255, 255, 255, 0.03);
     --glass-border: rgba(255, 255, 255, 0.08);
 }
@@ -50,7 +51,7 @@ body {
     height: 300px;
     background: var(--accent);
     filter: blur(150px);
-    opacity: 0.2;
+    opacity: 0.15;
     pointer-events: none;
 }
 
@@ -63,7 +64,7 @@ body {
 }
 
 .hero h1 span.accent-text {
-    background: linear-gradient(to right, #10b981, #3b82f6);
+    background: linear-gradient(to right, #EAB308, #FACC15);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -85,12 +86,12 @@ body {
 .cta-button {
     padding: 18px 40px;
     background: var(--accent);
-    color: white;
+    color: #000;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 800;
     border-radius: 12px;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+    box-shadow: 0 10px 20px rgba(234, 179, 8, 0.2);
 }
 
 .telegram-button {
@@ -137,7 +138,7 @@ body {
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 15px 30px rgba(234, 179, 8, 0.4);
     filter: brightness(1.1);
 }
 
@@ -284,7 +285,7 @@ body {
 
 /* --- FUNNEL SECTION --- */
 .funnel-banner {
-    background: linear-gradient(135deg, #10b981, #059669);
+    background: linear-gradient(135deg, #EAB308, #B45309);
     padding: 80px 20px;
     text-align: center;
     margin: 100px 0;
@@ -300,9 +301,9 @@ body {
     display: inline-block;
     padding: 15px 35px;
     background: white;
-    color: #10b981;
+    color: #B45309;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 800;
     border-radius: 12px;
     margin-top: 30px;
 }
@@ -317,4 +318,184 @@ footer {
 
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
+}
+
+/* --- FINANCIAL FREEDOM HUB STYLES --- */
+.financial-hub {
+    padding: 100px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: radial-gradient(circle at center, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+}
+
+.hub-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--accent);
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border: 1px solid var(--accent-glow);
+}
+
+.financial-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.fin-card {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 40px;
+    transition: all 0.3s ease;
+}
+
+.fin-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.fin-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.loan-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.loan-table th {
+    text-align: left;
+    padding: 12px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--glass-border);
+    font-size: 0.8rem;
+}
+
+.loan-table td {
+    padding: 15px 12px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.btn-action {
+    background: var(--accent);
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 800;
+    transition: 0.2s;
+}
+
+.btn-action:hover { filter: brightness(1.2); }
+
+.sim-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sim-input {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--glass-border);
+    padding: 14px;
+    border-radius: 12px;
+    color: white;
+    font-family: inherit;
+}
+
+.result-premium {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(59, 130, 246, 0.1));
+    border: 1px solid var(--accent);
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 30px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@media (max-width: 992px) {
+    .financial-grid { grid-template-columns: 1fr; }
+}
+
+/* --- NEW EVOLUTION SECTIONS --- */
+.testimonials-section {
+    padding: 100px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.testimonial-card {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    padding: 30px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 4rem;
+    color: var(--accent);
+    opacity: 0.2;
+    font-family: serif;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.user-img {
+    width: 45px;
+    height: 45px;
+    background: #333;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+}
+
+.lead-magnet {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1551288049-bbbda546697a?auto=format&fit=crop&q=80&w=1200');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 5%;
+    margin-top: 100px;
+    text-align: center;
+    border-top: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accent);
+}
+
+.magnet-form {
+    max-width: 500px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
